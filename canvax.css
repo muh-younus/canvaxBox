@@ -1,0 +1,68 @@
+body{
+
+    background: linear-gradient(30deg,red, black,blue)
+}
+
+
+
+
+
+
+.size1 {
+
+    background-color: red;
+    width: 30px;
+    height: 30px;
+    clip-path: circle();
+}
+.size2 {
+
+    background-color: red;
+    width: 40px;
+    height: 40px;
+    clip-path: circle();
+}
+.size3 {
+
+    background-color: red;
+    width: 55px;
+    height: 55px;
+    clip-path: circle();
+}
+.size4 {
+
+    background-color: red;
+    width: 70px;
+    height: 70px;
+    clip-path: circle();
+}
+.color{
+
+    width: 60px;
+    height: 60px;
+    clip-path: circle();
+    background-color: yellow;
+    
+}
+.size,.color
+{
+    cursor: pointer;
+
+}
+
+.canvas{
+
+    height: 60vh;
+    transition: all 0.5s linear;
+    overflow: hidden;
+    background-color: white;
+}
+
+.draw{
+
+   
+    background: linear-gradient(45deg,black,blue,green);
+    position: absolute;
+    clip-path: circle();
+   
+}
