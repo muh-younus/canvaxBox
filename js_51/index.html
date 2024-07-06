@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>www.canvax.com</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+
+    <div class="container Main border   p-2 ">
+
+        <div class="container   border p-3  gap-3 d-flex   ">
+
+            <div class="container  child1 border justify-content-between align-item-center d-flex p-3   ">
+
+            <div class="size0 size1 border"></div>
+            <div class="size0 size2 border"></div>
+            <div class="size0 size3 border"></div>
+            <div class="size0 size4 border"></div>
+            <div class="size0 size5 border"></div>
+
+        </div>
+
+        <div class="container child2 p-3 justify-content-between aligin-item-center  border  d-flex">
+            <div class="color color1"></div>
+            <div class="color color2"></div>
+            <div class="color color3"></div>
+            <div class="color color4"></div>
+            <div class="color color5"></div>
+        </div>
+
+
+        </div>
+
+        <div class="container canvax my-3 p-3 border m-auto"></div>
+    </div>
+    
+    <script>
+
+let size =document.querySelectorAll(".size0");
+let color =document.querySelectorAll(".color");
+let canvax = document.querySelector(".canvax");
+
+
+
+
+
+let isSize1;
+let isSize2;
+let isSize3;
+let isSize4;
+let isSize5;
+
+let isColor1;
+let isColor2;
+let isColor3;
+let isColor4;
+let isColor5;
+
+
+
+size.forEach((item,index) =>{
+
+   item.addEventListener("click", () => {
+
+    
+
+    if (item.classList[1]=="size1"){
+        isSize1=true;
+        isSize2=false;
+        isSize3=false;
+        isSize4=false;
+        isSize5=false;
+    }
+
+    else if(item.classList[1]=="size2"){
+
+        isSize1=false;
+        isSize2=true;
+        isSize3=false;
+        isSize4=false;
+        isSize5=false;
+    }
+
+    else if(item.classList[1]=="size3"){
+
+        isSize1=false;
+        isSize2=false;
+        isSize3=true;
+        isSize4=false;
+        isSize5=false;
+    }
+
+    else if(item.classList[1]=="size4"){
+
+        isSize1=false;
+        isSize2=false;
+        isSizee=false;
+        isSize=true;
+        isSize5=false;
+    }
+    else if(item.classList[1]=="size5"){
+
+        isSize1=false;
+        isSize2=false;
+        isSize3=false;
+        isSize4=false;
+        isSize5=true;
+    }
+
+
+    });
+});
+
+color.forEach((item,index) =>{
+
+    item.addEventListener("click", ()=> {
+
+        if (item.classList[1]=="color1"){
+        isColor1=true;
+        isColor2=false;
+        isColor3=false;
+        isColor4=false;
+        isColor5=false;
+    }
+
+    else if(item.classList[1]=="color2"){
+
+        isColor1=false;
+        isColor2=true;
+        isColor3=false;
+        isColor4=false;
+        isColor5=false;
+    }
+
+    else if(item.classList[1]=="color3"){
+
+        isColor1=false;
+        isColor2=false;
+        isColor3=true;
+        isColor4=false;
+        isColor5=false;
+    }
+
+    else if(item.classList[1]=="color4"){
+
+        isColor1=false;
+        isColor2=false;
+        isColor3=false;
+        isColor4=true;
+        isColor5=false;
+    }
+    else if(item.classList[1]=="color5"){
+
+        isColor1=false;
+        isColor2=false;
+        isColor3=false;
+        isColor4=false;
+        isColor5=true;
+    }
+
+
+
+        
+
+    });
+
+
+});
+
+canvax.addEventListener("mousemove", (e)=> {
+
+let xPos = e.clientX;
+let yPos = e.clientY;
+
+let makeDiv = document.createElement("div");
+makeDiv.classList.add("design");
+canvax.appendChild(makeDiv);
+makeDiv.style.left = `${xPos}px`;
+makeDiv.style.top = `${yPos}px`;
+
+if(isSize1){
+
+    makeDiv.style.width="10px";
+    makeDiv.style.height= "10px";
+}
+
+else if(isSize2){
+
+    makeDiv.style.width="30px";
+    makeDiv.style.height="30px";
+
+}
+
+else if (isSize3){
+
+    makeDiv.style.width="50px";
+    makeDiv.style.height="50px";
+}
+
+else if(isSize4){
+
+    makeDiv.style.width="60px";
+    makeDiv.style.height="40px";
+}
+
+else if(isSize5){
+
+    makeDiv.style.width="70px";
+    makeDiv.style.height="50px";
+}
+
+// pick different color
+
+if(isColor1){
+
+makeDiv.style.backgroundColor="red";
+}
+
+else if(isColor2){
+
+    makeDiv.style.backgroundColor="blueviolet";
+
+}
+
+else if (isColor3){
+
+    makeDiv.style.backgroundColor="silver";
+}
+
+else if(isColor4){
+
+    makeDiv.style.backgroundColor="yellow";
+}
+
+else if(isColor5){
+
+    makeDiv.style.backgroundColor="white";
+}
+
+
+
+});
+
+
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

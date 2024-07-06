@@ -1,4 +1,5 @@
 let size =document.querySelectorAll(".size");
+console.log("size")
 let canvas=document.querySelector(".canvas");
 let color=document.querySelectorAll(".color");
 
